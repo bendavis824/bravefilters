@@ -1,0 +1,19 @@
+! Title: Dynamic Instagram Content Blocker
+! Description: Custom filters for Brave browser, dynamically blocking Instagram-related results in Google searches
+! Last modified: 2024-09-22
+! Homepage: https://github.com/bendavis824/brave-custom-filters
+
+! Block Google search results related to Instagram and its features
+google.*##.g:has-text(/inst(?:a|e|o)?gr(?:a|e|o)?m(?:er)?/i)
+google.*##.g:has-text(/(?:insta|ig)(?:\s*story|\s*reel|\s*post|\s*profile|\s*account)/i)
+google.*##.g:has-text(/(?:view|watch|see|check)(?:\s+instagram|\s+insta|\s+ig)/i)
+google.*##.g:has-text(/(?:instagram|insta|ig)(?:\s*viewer|\s*downloader|\s*tracker)/i)
+google.*##.g:has-text(/(?:instagram|insta|ig)(?:\s*follower|\s*like|\s*comment)/i)
+google.*##.g:has-text(/(?:instagram|insta|ig)(?:\s*influencer|\s*marketing|\s*analytics)/i)
+
+! Block Instagram-related domains in search results
+google.*##.g:has(a[href*="instagram.com"])
+google.*##.g:has(a[href*="insta.com"])
+google.*##.g:has(a[href*="ig.me"])
+
+! Add more custom filters below if needed:
